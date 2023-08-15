@@ -1,1 +1,16 @@
-first_business_idea = input("Hi, I'm AwfulBusinessIdeaGPT - I make lists of your awful business ideas. What awful business idea do you have?":)
+#Creates a list of bad business ideas
+
+first_business_idea = input("Hi, I'm AwfulBusinessIdeaGPT - I make lists of your awful business ideas. What awful business idea do you have?")
+
+print("Ok, great idea! " + first_business_idea + "! Are you done or do you have more ideas?")
+
+business_idea_list = [first_business_idea]
+
+while True:
+    next_idea = input("If you have another bad idea, type it. Otherwise type Done or I'm done")
+    if next_idea.lower() in ["done", "i'm done"]:
+        print("Fantastic")
+        break
+    else: business_idea_list.append(next_idea)
+    
+print("Here are all of your bad business ideas: " + str(business_idea_list))
